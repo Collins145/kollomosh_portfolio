@@ -1,0 +1,34 @@
+# Portfolio
+
+> Open-source personal portfolio template for developers, with an HTML page structure and React
+> components for interactive widgets. Vite provides development and production builds, Tailwind CSS
+> provides utility styling, and Firebase Firestore powers the optional like counter.
+
+The site is deployed as static files. Requires Node.js >= 20.19 and pnpm >= 9. External services
+needed for full functionality: a Formspree endpoint for the contact form and a Firebase project for
+the like counter. The Spotify playlist is embedded in a plain HTML iframe.
+
+## Project structure
+
+- `index.html`: page markup and metadata
+- `src/main.js`: navigation, contact form, and Vite entry point
+- `src/React/`: interactive skills, canvas effect, and Firestore likes widgets
+- `src/style.css`: Tailwind directives and site styling
+- `public/`: fonts, favicon, social preview image, and technology icons
+- `vite.config.js`: static build and deployment base path
+
+## Stack
+
+- **HTML, CSS, and JavaScript** -- page structure and client-side behavior
+- **React** -- interactive skills, canvas, and likes widgets
+- **Vite** -- development server and static production build
+- **Tailwind CSS** -- utility-first styling
+- **Firebase / Firestore** -- realtime like counter
+- **Formspree** -- contact form backend
+- **Montserrat** -- primary typeface
+- **pnpm** -- package manager
+
+## Getting started
+
+Run `pnpm install` and `pnpm dev` for local development. Run `pnpm build` to generate the deployable
+site in `dist/`; configure optional Firebase values in `.env.local` using `.env.example`.
