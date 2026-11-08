@@ -6,7 +6,7 @@ import react from "@vitejs/plugin-react";
 const projectRoot = fileURLToPath(new URL(".", import.meta.url));
 
 export default defineConfig({
-  base: "/dark-minimal/",
+  base: process.env.GITHUB_ACTIONS === "true" ? "/kollomosh_portfolio/" : "/",
   envPrefix: ["VITE_", "PUBLIC_"],
   plugins: [react()],
   build: {
