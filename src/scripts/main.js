@@ -1,6 +1,25 @@
-import "./style.css";
+import "../style.css";
 import "./mount-react.jsx";
 import "./chatbot.js";
+
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+if (navToggle && navMenu) {
+  const closeMenu = () => {
+    navMenu.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+  };
+  navToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+  navMenu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) closeMenu();
+  });
+}
 
 const nav = document.getElementById("main-nav");
 let navFrame = 0;

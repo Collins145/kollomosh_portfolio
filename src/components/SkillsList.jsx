@@ -7,10 +7,10 @@ const WebDevelopmentIcon = () => (
   </svg>
 );
 
-const MobileDevelopmentIcon = () => (
+const ITSupportIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <rect x="6" y="2.5" width="12" height="19" rx="2.5" />
-    <path d="M10 5h4m-3 13h2" />
+    <rect x="2" y="4" width="20" height="13" rx="2" />
+    <path d="M7 21h10m-5-4v4M8 9.5h2.5l1.5-2.5 1.5 4 1.5-2.5H17" />
   </svg>
 );
 
@@ -29,12 +29,22 @@ const skills = [
       "Single Page Applications (SPAs)",
       "Landing pages and business websites",
       "Portfolio websites",
+      "E-commerce websites & payment integration",
+      "Web app maintenance & performance optimization",
+      "API development & third-party integrations",
     ],
   },
   {
-    name: "Mobile Development",
-    icon: <MobileDevelopmentIcon />,
-    items: ["Mobile-friendly web apps", "React Native mobile apps"],
+    name: "IT Support",
+    icon: <ITSupportIcon />,
+    items: [
+      "Hardware & software troubleshooting",
+      "Network setup & configuration",
+      "Operating system installation & updates",
+      "Data backup & recovery",
+      "Virus/malware removal & security hardening",
+      "Remote & on-site technical support",
+    ],
   },
   {
     name: "UI/UX Design & Prototyping",

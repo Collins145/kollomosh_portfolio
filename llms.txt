@@ -10,9 +10,11 @@ the like counter. The Spotify playlist is embedded in a plain HTML iframe.
 
 ## Project structure
 
-- `index.html`: page markup and metadata
-- `src/main.js`: navigation, contact form, and Vite entry point
-- `src/React/`: interactive skills, canvas effect, and Firestore likes widgets
+- `index.html` and the other root `.html` pages: page markup and metadata
+- `src/scripts/main.js`: navigation, contact form, and Vite entry point
+- `src/scripts/chatbot.js`: contact chatbot widget
+- `src/scripts/mount-react.jsx`: mounts the React widgets into the pages
+- `src/components/`: interactive skills, canvas effect, and Firestore likes widgets
 - `src/style.css`: Tailwind directives and site styling
 - `public/`: fonts, favicon, social preview image, and technology icons
 - `vite.config.js`: static build and deployment base path

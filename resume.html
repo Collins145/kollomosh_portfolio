@@ -3,39 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Resume of Collins Omondi, web developer, UI/UX designer, and technical mentor." />
+    <meta
+      name="description"
+      content="Resume of Collins Omondi, web developer, UI/UX designer, and technical mentor."
+    />
     <meta name="theme-color" content="#101010" />
     <title>Resume | Kollomosh Portfolio</title>
-    <link rel="preload" href="./fonts/montserrat-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <script type="module" src="./src/main.js"></script>
+    <link
+      rel="preload"
+      href="./fonts/montserrat-latin-wght-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script type="module" src="./src/scripts/main.js"></script>
   </head>
   <body class="bg-[#101010] px-9 sm:px-28 lg:px-20">
     <header class="flex justify-center">
-      <nav id="main-nav" class="fixed bottom-0 left-1/2 z-[100] w-full -translate-x-1/2 border border-transparent bg-[var(--background)] backdrop-blur-xl transition-all duration-500 ease-in-out md:top-6 md:bottom-auto md:w-[80%]">
-        <div class="container mx-auto flex items-center justify-center p-3">
-          <ul class="flex w-full justify-between gap-6 md:w-auto md:justify-center md:gap-12">
-            <li class="flex-1 md:flex-none"><a href="./index.html#home" class="nav-link flex flex-col items-center gap-1 text-xs text-[var(--white-icon)] transition-colors md:text-base"><span class="nav-indicator hidden md:block"></span><span class="md:hidden" aria-hidden="true">⌂</span><span>Home</span></a></li>
-            <li class="flex-1 md:flex-none"><a href="./about.html#about" class="nav-link flex flex-col items-center gap-1 text-xs text-[var(--white-icon)] transition-colors md:text-base"><span class="nav-indicator hidden md:block"></span><span class="md:hidden" aria-hidden="true">ℹ</span><span>About</span></a></li>
-            <li class="flex-1 md:flex-none"><a href="#resume" class="nav-link flex flex-col items-center gap-1 text-xs text-[var(--white-icon)] transition-colors md:text-base"><span class="nav-indicator hidden md:block"></span><span class="md:hidden" aria-hidden="true">▤</span><span>Resume</span></a></li>
-            <li class="flex-1 md:flex-none"><a href="./projects.html#projects" class="nav-link flex flex-col items-center gap-1 text-xs text-[var(--white-icon)] transition-colors md:text-base"><span class="nav-indicator hidden md:block"></span><span class="md:hidden" aria-hidden="true">▧</span><span>Projects</span></a></li>
-            <li class="flex-1 md:flex-none"><a href="./services.html#services" class="nav-link flex flex-col items-center gap-1 text-xs text-[var(--white-icon)] transition-colors md:text-base"><span class="nav-indicator hidden md:block"></span><span class="md:hidden" aria-hidden="true">⚙</span><span>Services</span></a></li>
-            <li class="flex-1 md:flex-none"><a href="./contact.html#contact" class="nav-link flex flex-col items-center gap-1 text-xs text-[var(--white-icon)] transition-colors md:text-base"><span class="nav-indicator hidden md:block"></span><span class="md:hidden" aria-hidden="true">➤</span><span>Contact</span></a></li>
+      <nav
+        id="main-nav"
+        class="fixed top-0 left-0 z-[100] w-full border border-transparent bg-[var(--background)] backdrop-blur-xl transition-all duration-500 ease-in-out md:top-6 md:left-1/2 md:w-[80%] md:-translate-x-1/2"
+      >
+        <div
+          class="flex items-center justify-between gap-3 p-3 md:justify-center md:p-4"
+        >
+          <!-- <a href="#resume" class="nav-brand text-base font-bold text-white md:absolute md:left-6">Kollomosh</a> -->
+          <button
+            id="nav-toggle"
+            type="button"
+            class="mobile-menu-toggle"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            aria-label="Toggle navigation menu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <ul id="nav-menu" class="nav-menu">
+            <li>
+              <a
+                href="#home"
+                class="nav-link text-base text-[var(--white-icon)] transition-colors"
+                ><span class="nav-indicator"></span>Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="./about.html#about"
+                class="nav-link text-base text-[var(--white-icon)] transition-colors"
+                ><span class="nav-indicator"></span>About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#resume"
+                class="nav-link text-base text-[var(--white-icon)] transition-colors"
+                ><span class="nav-indicator"></span>Resume</a
+              >
+            </li>
+            <li>
+              <a
+                href="./projects.html#projects"
+                class="nav-link text-base text-[var(--white-icon)] transition-colors"
+                ><span class="nav-indicator"></span>Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="./services.html#services"
+                class="nav-link text-base text-[var(--white-icon)] transition-colors"
+                ><span class="nav-indicator"></span>Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="./contact.html#contact"
+                class="nav-link text-base text-[var(--white-icon)] transition-colors"
+                ><span class="nav-indicator"></span>Contact</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
     </header>
 
     <div class="resume-page-backdrops" aria-hidden="true">
-      <img class="section-backdrop is-active" src="./images/programmer.png" alt="" width="1200" height="900" fetchpriority="high" />
-      <img class="section-backdrop" src="./images/H@cker.jpg" alt="" width="720" height="720" />
-      <img class="section-backdrop" src="./images/Founder-Telchie.png" alt="" width="1440" height="720" />
+      <img
+        class="section-backdrop is-active"
+        src="./images/programmer.png"
+        alt=""
+        width="1200"
+        height="900"
+        fetchpriority="high"
+      />
+      <img
+        class="section-backdrop"
+        src="./images/H@cker.jpg"
+        alt=""
+        width="720"
+        height="720"
+      />
+      <img
+        class="section-backdrop"
+        src="./images/Founder-Telchie.png"
+        alt=""
+        width="1440"
+        height="720"
+      />
     </div>
 
     <main class="resume-page-main">
       <section id="resume" class="py-12 text-[var(--white)]">
         <div class="ambient-panel mt-12 resume-panel">
           <div class="section-heading">
-            <p class="section-kicker">Resume <span aria-hidden="true"></span></p>
+            <p class="section-kicker">
+              Resume <span aria-hidden="true"></span>
+            </p>
           </div>
 
           <div class="resume-columns">
@@ -44,17 +126,37 @@
                 <h2 id="summary-heading">Professional Summary</h2>
                 <article class="resume-entry">
                   <h3>Web Developer & UI/UX Designer</h3>
-                  <p class="resume-summary">Creative and detail-oriented Web Developer and UI/UX Designer with experience crafting intuitive, user-centered digital experiences. Skilled in user research, wireframing, prototyping, usability testing, and responsive design, with a focus on making practical and engaging web experiences.</p>
+                  <p class="resume-summary">
+                    Creative and detail-oriented Web Developer and UI/UX
+                    Designer with experience crafting intuitive, user-centered
+                    digital experiences. Skilled in user research, wireframing,
+                    prototyping, usability testing, and responsive design, with
+                    a focus on making practical and engaging web experiences.
+                  </p>
                   <ul class="resume-contact-list">
                     <li>Nairobi, Kenya</li>
                     <li><a href="tel:+254743100829">+254 743 100 829</a></li>
-                    <li><a href="mailto:collinsomondi825@gmail.com">collinsomondi825@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/collins-omondi-a88029188/" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></li>
+                    <li>
+                      <a href="mailto:collinsomondi825@gmail.com"
+                        >collinsomondi825@gmail.com</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/in/collins-omondi-a88029188/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >LinkedIn profile</a
+                      >
+                    </li>
                   </ul>
                 </article>
               </section>
 
-              <section class="resume-section" aria-labelledby="education-heading">
+              <section
+                class="resume-section"
+                aria-labelledby="education-heading"
+              >
                 <h2 id="education-heading">Education</h2>
                 <article class="resume-entry">
                   <h3>Diploma in Information Technology</h3>
@@ -69,47 +171,97 @@
                 </article>
               </section>
 
-              <section class="resume-section" aria-labelledby="certifications-heading">
-                <h2 id="certifications-heading">Certifications &amp; Training</h2>
+              <section
+                class="resume-section"
+                aria-labelledby="certifications-heading"
+              >
+                <h2 id="certifications-heading">
+                  Certifications &amp; Training
+                </h2>
                 <article class="resume-entry">
                   <h3>Introduction to Networking</h3>
                   <span class="resume-date">2025 – 2026</span>
                   <p class="resume-entry__place">Cisco Networking Academy</p>
-                  <a class="resume-badge-link" href="https://www.credly.com/users/collins-omondi.ad3357ac" target="_blank" rel="noopener noreferrer">View badge on Credly <span aria-hidden="true">↗</span></a>
+                  <a
+                    class="resume-badge-link"
+                    href="https://www.credly.com/users/collins-omondi.ad3357ac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View badge on Credly <span aria-hidden="true">↗</span></a
+                  >
                 </article>
                 <article class="resume-entry">
                   <h3>Introduction to Cybersecurity</h3>
                   <span class="resume-date">2025 – 2026</span>
-                  <p class="resume-entry__place">ICT Authority &amp; Cisco Networking Academy</p>
-                  <a class="resume-badge-link" href="https://www.credly.com/users/collins-omondi.ad3357ac" target="_blank" rel="noopener noreferrer">View badge on Credly <span aria-hidden="true">↗</span></a>
+                  <p class="resume-entry__place">
+                    ICT Authority &amp; Cisco Networking Academy
+                  </p>
+                  <a
+                    class="resume-badge-link"
+                    href="https://www.credly.com/users/collins-omondi.ad3357ac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View badge on Credly <span aria-hidden="true">↗</span></a
+                  >
                 </article>
                 <article class="resume-entry">
                   <h3>Ethical Hacking Training</h3>
                   <span class="resume-date">Feb – Apr 2026</span>
-                  <p class="resume-entry__place">Cybershujaa &amp; Cisco Networking Academy</p>
-                  <a class="resume-badge-link" href="https://www.credly.com/users/collins-omondi.ad3357ac" target="_blank" rel="noopener noreferrer">View badge on Credly <span aria-hidden="true">↗</span></a>
+                  <p class="resume-entry__place">
+                    Cybershujaa &amp; Cisco Networking Academy
+                  </p>
+                  <a
+                    class="resume-badge-link"
+                    href="https://www.credly.com/users/collins-omondi.ad3357ac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View badge on Credly <span aria-hidden="true">↗</span></a
+                  >
                 </article>
                 <article class="resume-entry">
                   <h3>Fullstack Web Development Training</h3>
                   <span class="resume-date">Oct – Dec 2026</span>
-                  <p class="resume-entry__place">eMobilis (Technology Training Institute)</p>
-                  <a class="resume-badge-link" href="https://www.credly.com/users/collins-omondi.ad3357ac" target="_blank" rel="noopener noreferrer">View badge on Credly <span aria-hidden="true">↗</span></a>
+                  <p class="resume-entry__place">
+                    eMobilis (Technology Training Institute)
+                  </p>
+                  <a
+                    class="resume-badge-link"
+                    href="https://www.credly.com/users/collins-omondi.ad3357ac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View badge on Credly <span aria-hidden="true">↗</span></a
+                  >
                 </article>
               </section>
             </div>
 
             <div class="resume-column resume-column--experience">
-              <section class="resume-section" aria-labelledby="experience-heading">
+              <section
+                class="resume-section"
+                aria-labelledby="experience-heading"
+              >
                 <h2 id="experience-heading">Work Experience</h2>
                 <article class="resume-entry">
                   <h3>Technical Mentor | Siaya Community Digital Hub</h3>
                   <span class="resume-date">Mar 2025 – Present</span>
                   <p class="resume-entry__place">Siaya, Kenya</p>
                   <ul>
-                    <li>Facilitate training in digital literacy, web development, graphic design, and cybersecurity.</li>
-                    <li>Collaborate with industry stakeholders to align training programs with market needs.</li>
-                    <li>Coach students on CV writing, LinkedIn optimization, and interview skills.</li>
-                    <li>Train learners in foundational and advanced digital skills.</li>
+                    <li>
+                      Facilitate training in digital literacy, web development,
+                      graphic design, and cybersecurity.
+                    </li>
+                    <li>
+                      Collaborate with industry stakeholders to align training
+                      programs with market needs.
+                    </li>
+                    <li>
+                      Coach students on CV writing, LinkedIn optimization, and
+                      interview skills.
+                    </li>
+                    <li>
+                      Train learners in foundational and advanced digital
+                      skills.
+                    </li>
                   </ul>
                 </article>
                 <article class="resume-entry">
@@ -117,10 +269,22 @@
                   <span class="resume-date">Jan 2020 – Dec 2023</span>
                   <p class="resume-entry__place">Nairobi, Kenya</p>
                   <ul>
-                    <li>Contributed to the design, development, and production of communication materials.</li>
-                    <li>Created marketing assets including logos, brochures, infographics, presentations, and advertisements.</li>
-                    <li>Managed multiple projects and tasks while consulting with clients on graphic design.</li>
-                    <li>Prepared design presentations and proposals for clients and account managers.</li>
+                    <li>
+                      Contributed to the design, development, and production of
+                      communication materials.
+                    </li>
+                    <li>
+                      Created marketing assets including logos, brochures,
+                      infographics, presentations, and advertisements.
+                    </li>
+                    <li>
+                      Managed multiple projects and tasks while consulting with
+                      clients on graphic design.
+                    </li>
+                    <li>
+                      Prepared design presentations and proposals for clients
+                      and account managers.
+                    </li>
                   </ul>
                 </article>
               </section>

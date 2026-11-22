@@ -732,7 +732,6 @@ html {
 
 body {
   margin: 0;
-  padding-bottom: 70px;
 }
 
 .site-footer {
@@ -1620,15 +1619,108 @@ body {
     margin-top: 1.5rem;
   }
 
+  .nav-brand {
+    position: relative;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: .7rem;
+    border: 1px solid var(--white-icon-tr);
+    border-radius: .6rem;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--white);
+    transition: transform .3s ease, opacity .3s ease;
+  }
+
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-menu-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: .5rem;
+    border: 1px solid #ffffff10;
+    border-radius: 0 0 1rem 1rem;
+    background: var(--component-bg);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 18px 40px rgb(0 0 0 / 45%);
+    list-style: none;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu li + li {
+    border-top: 1px solid rgb(255 255 255 / 8%);
+  }
+
+  .nav-menu a {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .9rem 1rem;
+    border-radius: .5rem;
+    color: var(--white-icon);
+    text-decoration: none;
+  }
+
+  .nav-menu a:hover,
+  .nav-menu a.active {
+    background: rgb(255 255 255 / 6%);
+    color: var(--theme-green);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   #main-nav {
-    bottom: 0;
-    width: 100% !important;
-    border-color: #ffffff10;
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 9999px;
   }
 
   #main-nav.scrolling {
-    border-radius: 1rem 1rem 0 0;
+    border-color: #ffffff10;
+    background: var(--component-bg);
   }
 }
 

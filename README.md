@@ -24,7 +24,7 @@ pnpm dev
 
 Build the static site into `dist/` with `pnpm build`, or preview the production build with `pnpm preview`.
 
-The site uses Vite for development/build tooling and Tailwind CSS for styling. The page structure is HTML, with React components for interactive widgets; Firebase is used for the optional Firestore likes counter. Copy `.env.example` to `.env.local` and set the `PUBLIC_FIREBASE_*` values to enable it.
+The site uses Vite for development/build tooling and Tailwind CSS for styling. Page markup lives in the root `.html` files, with React components for interactive widgets under `src/components/` and page scripts under `src/scripts/`; Firebase is used for the optional Firestore likes counter. Copy `.env.example` to `.env.local` and set the `PUBLIC_FIREBASE_*` values to enable it.
 
 ## Author 
 ```

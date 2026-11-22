@@ -2,7 +2,7 @@ const ownerEmail = "collinsomondi825@gmail.com";
 const ownerWhatsApp = "254743100829";
 const serviceOptions = [
   { value: "Web Development", label: "Web Development — from $150" },
-  { value: "Mobile Development", label: "Mobile Development — from $700" },
+  { value: "IT Support", label: "IT Support — from $50" },
   { value: "UI/UX Design & Prototyping", label: "UI/UX Design & Prototyping — from $700" },
   { value: "Other inquiry", label: "Other inquiry" },
 ];
@@ -178,9 +178,9 @@ function createAssistant() {
       addMessage("Sure. Share a few details and I’ll prepare an inquiry for Collins.");
       showQuoteForm();
     } else if (/\b(price|prices|pricing|cost|costs|charge|charges|rate|rates|how much|budget)\b/.test(query)) {
-      addMessage("Starting prices: Web development from $150, mobile development from $700, and UI/UX design & prototyping from $700. Final pricing depends on the project’s scope and requirements. Request a quote to discuss your project.");
+      addMessage("Starting prices: Web development from $150, IT Support from $50, and UI/UX design & prototyping from $700. Final pricing depends on the project’s scope and requirements. Request a quote to discuss your project.");
     } else if (/\b(service|services|web|website|frontend|landing page|mobile|app|design|ui|ux|prototype)\b/.test(query)) {
-      addMessage("Services include web development (business sites, landing pages and web apps), mobile development (mobile-friendly apps and React Native), and UI/UX design & prototyping (research, interface design and usability improvements). Starting prices are $150 for web development and $700 for mobile development or UI/UX. What would you like to build?");
+      addMessage("Services include web development (business sites, landing pages, e-commerce, web apps, APIs and maintenance), IT Support (troubleshooting, network setup, OS installation, backups, virus removal), and UI/UX design & prototyping (research, interface design and usability improvements). Starting prices are $150 for web development, $50 for IT Support and $700 for UI/UX. What would you like to build?");
     } else if (/\b(contact|email|call|phone|whatsapp|collins|human|person)\b/.test(query)) {
       addMessage(`You can reach Collins at ${ownerEmail} or +254 743 100 829 on WhatsApp. I can also prepare an inquiry for you to send.`);
       showQuoteForm();

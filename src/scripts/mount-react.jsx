@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
-import SkillsList from "./React/SkillsList.jsx";
-import LetterGlitch from "./React/LetterGlitch.jsx";
-import LikeButton from "./React/LikeButton.jsx";
+import SkillsList from "../components/SkillsList.jsx";
+import LetterGlitch from "../components/LetterGlitch.jsx";
+import LikeButton from "../components/LikeButton.jsx";
 
 const skillsRoot = document.getElementById("skills-root");
 if (skillsRoot) createRoot(skillsRoot).render(<SkillsList />);
